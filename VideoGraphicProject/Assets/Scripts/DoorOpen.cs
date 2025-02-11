@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class DoorOpen : MonoBehaviour
 {
-      public float open = 100f;
-    public float range = 10f;
+    [SerializeField] float open = 100f;
+    [SerializeField] float range = 10f;
 
-    public GameObject door;
-    public bool isOpening = false;
+    [SerializeField] GameObject door;
+    [SerializeField] bool isOpening = false;
 
-    public Camera fpsCam;
+    [SerializeField] Camera fpsCam;
+
+    [SerializeField] AudioSource src;
+    [SerializeField] AudioClip myClip;
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown("f"))
         {
             Shoot();
+            src.Play();
             Debug.Log("Opening");
         }
     }
