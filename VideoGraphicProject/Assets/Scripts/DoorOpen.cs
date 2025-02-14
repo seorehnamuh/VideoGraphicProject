@@ -19,24 +19,9 @@ public class DoorOpen : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown("f"))
         {
-            Shoot();
+            StartCoroutine(OpenDoor());
             src.Play();
             Debug.Log("Opening");
-        }
-    }
-
-    void Shoot ()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
-        {
-            Debug.Log(hit.transform.name);
-
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
-            {
-                StartCoroutine(OpenDoor());
-            }
         }
     }
 
