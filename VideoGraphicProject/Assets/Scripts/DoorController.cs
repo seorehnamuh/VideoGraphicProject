@@ -15,15 +15,15 @@ public class DoorController : MonoBehaviour
         if (doorIsOpening == true) {
             DoorUno.transform.Translate (Vector3.up * Time.deltaTime * 5);
         }
-
+        
         if (DoorUno.transform.position.y > 7f) {
             doorIsOpening = false;
         }
     }
 
     void OnMouseDown() {
-        doorIsOpening = true;
-        src.Play();
-        Debug.Log("Opening");
+            doorIsOpening = true;
+            src.Play();
+            Debug.Log("Opening");
     }
 }
