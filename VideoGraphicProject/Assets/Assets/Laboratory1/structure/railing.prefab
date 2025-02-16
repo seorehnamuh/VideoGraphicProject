@@ -507,6 +507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4378786020515557041}
+  - component: {fileID: 7217190090989452579}
   m_Layer: 0
   m_Name: railing
   m_TagString: Untagged
@@ -522,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3665725854694262453}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 583.8, y: 111.4, z: -1744.3}
   m_LocalScale: {x: 85.066246, y: 85.06627, z: 85.066246}
   m_ConstrainProportionsScale: 0
@@ -539,7 +540,28 @@ Transform:
   - {fileID: 4530554269399991847}
   - {fileID: 5697354214419824807}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &7217190090989452579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3665725854694262453}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1367263, y: 1.1874743, z: 0.31673428}
+  m_Center: {x: -1.1152114, y: 2.5442858, z: -11.208913}
 --- !u!1 &4094708612547425633
 GameObject:
   m_ObjectHideFlags: 0
