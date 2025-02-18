@@ -3,7 +3,57 @@ guid: 631bda2693da6d54ba49b18b1121ee83
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1F25C680
+    second: {fileID: 2100000, guid: 7ce44a59f398e9e4199a2a86cf31cc31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 21E7C680
+    second: {fileID: 2100000, guid: 7ce44a59f398e9e4199a2a86cf31cc31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2425C680
+    second: {fileID: 2100000, guid: 27dcecfbccd2aec42bee6f4606b794e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 6625C680
+    second: {fileID: 2100000, guid: 7ce44a59f398e9e4199a2a86cf31cc31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 6925C680
+    second: {fileID: 2100000, guid: 27dcecfbccd2aec42bee6f4606b794e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 6B25C680
+    second: {fileID: 2100000, guid: 27dcecfbccd2aec42bee6f4606b794e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 6E25C680
+    second: {fileID: 2100000, guid: 27dcecfbccd2aec42bee6f4606b794e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 8025C680
+    second: {fileID: 2100000, guid: 27dcecfbccd2aec42bee6f4606b794e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: B824C680
+    second: {fileID: 2100000, guid: 27dcecfbccd2aec42bee6f4606b794e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C442C680
+    second: {fileID: 2100000, guid: 27dcecfbccd2aec42bee6f4606b794e6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
