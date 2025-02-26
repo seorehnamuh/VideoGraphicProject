@@ -12411,6 +12411,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1404767336}
+    - targetCorrespondingSourceObject: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1404767343}
     - targetCorrespondingSourceObject: {fileID: 1593727746557118, guid: 11aaea5348574644a9eb4f4504fcce3f,
         type: 3}
       insertIndex: -1
@@ -13303,6 +13307,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1651039417}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &603438112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603438113}
+  - component: {fileID: 603438114}
+  m_Layer: 0
+  m_Name: AllButton
+  m_TagString: DoorButton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &603438113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603438112}
+  serializedVersion: 2
+  m_LocalRotation: {x: -4.1211473e-13, y: 1, z: -0.00000014106499, w: 0.0000029504295}
+  m_LocalPosition: {x: -0.0041370806, y: -0.0057510515, z: 0.021096427}
+  m_LocalScale: {x: 0.00027679937, y: 0.0028883505, z: 0.0018900271}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 658497345}
+  m_Father: {fileID: 1875257933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &603438114
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603438112}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 115.36176, y: 3.4709136, z: 24.597067}
+  m_Center: {x: 57.18087, y: 1.2354567, z: 3.8603215}
 --- !u!1 &604377691
 GameObject:
   m_ObjectHideFlags: 0
@@ -14726,6 +14784,7 @@ GameObject:
   - component: {fileID: 658497343}
   - component: {fileID: 658497342}
   - component: {fileID: 658497341}
+  - component: {fileID: 658497346}
   m_Layer: 0
   m_Name: ButtonDoor
   m_TagString: Untagged
@@ -14768,8 +14827,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3707323, y: 2.0794473, z: 2.1564758}
-  m_Center: {x: 0.685366, y: -0.07905721, z: -0.061658967}
+  m_Size: {x: 16.392946, y: 2.0794468, z: 4.1600637}
+  m_Center: {x: 7.696467, y: -0.07905721, z: 0.14578973}
 --- !u!23 &658497343
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14790,7 +14849,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a73ab057ab5cd0344a9b1166683bc7f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14828,13 +14887,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658497340}
   serializedVersion: 2
-  m_LocalRotation: {x: -4.1211473e-13, y: 1, z: -0.00000014106499, w: 0.0000029504295}
-  m_LocalPosition: {x: -0.0041370806, y: -0.0057510515, z: 0.021096427}
-  m_LocalScale: {x: 0.00027679934, y: 0.0028883503, z: 0.0018900273}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1875257933}
+  m_Father: {fileID: 603438113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &658497346
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658497340}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e63d25b6185c35f44a3841ad40f0ea01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &658961867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 57dbf46e048eb3749b360b82eb2d73dd,
@@ -25981,6 +26061,18 @@ MonoBehaviour:
   fpsCam: {fileID: 38882551}
   src: {fileID: 0}
   myClip: {fileID: 8300000, guid: bb0bc69452bd0254e9054dac58375312, type: 3}
+--- !u!114 &1404767343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404767329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0330a62a0353940a3f72ad3c259980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1409268287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6515825475035349182, guid: d19d9ca5793533749b8a3fc6389af07e,
@@ -33131,7 +33223,7 @@ Transform:
   - {fileID: 2048338148}
   - {fileID: 1942807157}
   - {fileID: 40133709}
-  - {fileID: 658497345}
+  - {fileID: 603438113}
   - {fileID: 1451402633}
   m_Father: {fileID: 1661606198}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
