@@ -10,9 +10,19 @@ public class OnCollision : MonoBehaviour
     //     anim = GetComponent<Animator>();
     // }
 
-    void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag.Equals("DoorButton")) {
-            // anim.Play();
+    // void OnTriggerEnter(Collider other) {
+    //     if(other.gameObject.tag.Equals("DoorButton")) {
+    //         // anim.Play();
+    //         Debug.Log("hit");
+    //     }
+    // }
+
+    [SerializeField] Animator anim;
+
+    void OnTriggerEnter(Collider other){
+    if (other.gameObject.CompareTag("DoorButton"))
+        {
+            anim.Play("DoorOpenAnimation");
             Debug.Log("hit");
         }
     }
