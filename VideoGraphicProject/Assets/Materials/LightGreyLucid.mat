@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1283169095848868300
+--- !u!114 &-479604419102782634
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,31 +20,32 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: blue-glass
+  m_Name: LightGreyLucid
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: e9eaae169d9ae16459d021fcf3aec4ae, type: 2}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
-  - _SURFACE_TYPE_TRANSPARENT
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
-    RenderType: Transparent
-  disabledShaderPasses:
-  - DepthOnly
-  - SHADOWCASTER
+    RenderType: Opaque
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Smoothness: 0.5
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _Metallic: 0.121
+    - _Smoothness: 0.79
+    - _Surface: 0
+    - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.9259801, b: 1, a: 0.3764706}
-    - _Color: {r: 0, g: 0.9259801, b: 1, a: 0.3764706}
+    - _BaseColor: {r: 0.74213827, g: 0.7398045, b: 0.7398045, a: 1}
+    - _Color: {r: 0.74213827, g: 0.73980445, b: 0.73980445, a: 1}
   m_BuildTextureStacks: []
