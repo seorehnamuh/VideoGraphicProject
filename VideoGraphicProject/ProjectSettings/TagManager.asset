@@ -6,6 +6,8 @@ TagManager:
   tags:
   - myKey
   - DoorButton
+  - MainHallMapsTrigger
+  - TheBermudaTriangleTrigger
   layers:
   - Default
   - TransparentFX
