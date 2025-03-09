@@ -8,6 +8,7 @@ TagManager:
   - DoorButton
   - MainHallMapsTrigger
   - TheBermudaTriangleTrigger
+  - GravityAnomalyTrigger
   layers:
   - Default
   - TransparentFX

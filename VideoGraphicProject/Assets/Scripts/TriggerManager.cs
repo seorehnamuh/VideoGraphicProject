@@ -16,7 +16,7 @@ public class TriggerManager : MonoBehaviour
         {
           { "MainHallMapsTrigger", "Starship Maps Level 1" },
           { "TheBermudaTriangleTrigger", "The Bermuda Triangle, a mysterious stretch of ocean has swallowed ships and planes without a trace for centuries. Some say it's a gateway to another dimension, others whisper of a magnetic force so strong it bends time itself." },
-          
+          { "GravityAnomalyTrigger", " A gravity anomaly is a place where the natural pull of gravity twists and warps, defying the laws of physics. In these eerie zones, objects roll uphill, compasses spin erratically, and people feel an invisible force tugging at them." },
         
 
         };
