@@ -7,37 +7,39 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Skin
+  m_Name: PaleRed
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 49ae029b822e9d74da71eec6addc3ff3, type: 2}
-  m_ModifiedSerializedProperties: 18
-  m_ValidKeywords: []
+  m_Parent: {fileID: 2100000, guid: b1a34eea20ea55c47b61a28a70365b00, type: 2}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
-  m_LightmapFlags: 6
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses: []
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
-    - _Metallic: 0.415
-    - _Smoothness: 0.182
-    - _Surface: 0
-    - _ZWrite: 1
+    - _DstBlend: 10
+    - _DstBlendAlpha: 10
+    - _Surface: 1
+    - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.8954401, b: 0.79559743, a: 1}
-    - _Color: {r: 1, g: 0.8954401, b: 0.79559743, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 0, b: 0.06511302, a: 0.31764707}
+    - _Color: {r: 1, g: 0, b: 0.065113, a: 0.31764707}
+    - _EmissionColor: {r: 1, g: 0, b: 0.017929077, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &7135885991357719584
+--- !u!114 &6964752291955010434
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1874,9 +1874,9 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 6
   MaxDistance: 9.697281
   Pan2D: 0
   rolloffMode: 1
@@ -12820,7 +12820,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d19d9ca5793533749b8a3fc6389af07e,
         type: 3}
       propertyPath: m_Name
-      value: MegaRoom
+      value: ScifiRoom
       objectReference: {fileID: 0}
     - target: {fileID: 952456299911267540, guid: d19d9ca5793533749b8a3fc6389af07e,
         type: 3}
@@ -46100,15 +46100,15 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 55aaab98801a0804dbdfbf164ecaba10, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.642
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 163
   DopplerLevel: 1
-  MinDistance: 0
+  MinDistance: 1
   MaxDistance: 9.697281
   Pan2D: 0
   rolloffMode: 1
@@ -51276,7 +51276,7 @@ PrefabInstance:
     - target: {fileID: 6561258250894806115, guid: 61d17a6382df214409c6725ff305e434,
         type: 3}
       propertyPath: m_Name
-      value: DisplayCase
+      value: FlaskBox
       objectReference: {fileID: 0}
     - target: {fileID: 6561258250894806115, guid: 61d17a6382df214409c6725ff305e434,
         type: 3}
@@ -51844,7 +51844,7 @@ PrefabInstance:
     - target: {fileID: 7593112645247298832, guid: 01be18245d190e543b21a0fcd2d78f98,
         type: 3}
       propertyPath: m_Name
-      value: DisplayCase1
+      value: FlaskBox1
       objectReference: {fileID: 0}
     - target: {fileID: 7593112645247298832, guid: 01be18245d190e543b21a0fcd2d78f98,
         type: 3}
