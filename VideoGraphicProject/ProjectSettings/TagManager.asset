@@ -9,6 +9,7 @@ TagManager:
   - MainHallMapsTrigger
   - TheBermudaTriangleTrigger
   - GravityAnomalyTrigger
+  - AccessDeniedTrigger
   layers:
   - Default
   - TransparentFX
