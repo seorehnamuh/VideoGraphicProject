@@ -10,6 +10,9 @@ TagManager:
   - TheBermudaTriangleTrigger
   - GravityAnomalyTrigger
   - AccessDeniedTrigger
+  - Alien1Description
+  - Alien2Description
+  - Alien3Description
   layers:
   - Default
   - TransparentFX

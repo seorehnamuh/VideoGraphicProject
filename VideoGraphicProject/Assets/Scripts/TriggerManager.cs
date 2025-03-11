@@ -15,9 +15,13 @@ public class TriggerManager : MonoBehaviour
         objectsWithMessages = new Dictionary<string, string>
         {
           { "MainHallMapsTrigger", "Starship Maps Level 1" },
-          { "TheBermudaTriangleTrigger", "The Bermuda Triangle, a mysterious stretch of ocean has swallowed ships and planes without a trace for centuries. Some say it's a gateway to another dimension, others whisper of a magnetic force so strong it bends time itself." },
-          { "GravityAnomalyTrigger", " A gravity anomaly is a place where the natural pull of gravity twists and warps, defying the laws of physics. In these eerie zones, objects roll uphill, compasses spin erratically, and people feel an invisible force tugging at them." },
+          { "TheBermudaTriangleTrigger", "The Bermuda Triangle - an ocean stretch has swallowed ships and planes for centuries. " },
+          { "GravityAnomalyTrigger", " A gravity anomaly - a place where objects roll uphill, compasses spin erratically, people feel a force pulling them." },
           { "AccessDeniedTrigger", "ACCESS DENIED" },
+          { "Alien1Description", "Flying saucers streak across the night sky, defying gravity and vanishing in an instant." },
+          { "Alien2Description", "Figures of light appear in the night. No faces, No features, just a pulsing radiance." },
+          { "Alien3Description", "Classified recordings reveal impossible craft—defying physics, watching, unafraid." },
+          
 
         };
 
