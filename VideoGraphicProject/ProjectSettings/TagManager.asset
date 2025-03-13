@@ -13,6 +13,7 @@ TagManager:
   - Alien1Description
   - Alien2Description
   - Alien3Description
+  - ExperimentBlueCapsule
   layers:
   - Default
   - TransparentFX

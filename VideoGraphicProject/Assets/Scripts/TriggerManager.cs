@@ -21,6 +21,8 @@ public class TriggerManager : MonoBehaviour
           { "Alien1Description", "Flying saucers streak across the night sky, defying gravity and vanishing in an instant." },
           { "Alien2Description", "Figures of light appear in the night. No faces, No features, just a pulsing radiance." },
           { "Alien3Description", "Classified recordings reveal impossible craft—defying physics, watching, unafraid." },
+          { "ExperimentBlueCapsule", "Experiment 3740 - Creatures from Proxima B, defying the boundaries of known life." },
+          
           
 
         };
