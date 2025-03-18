@@ -23,7 +23,6 @@ public class TriggerManager : MonoBehaviour
           { "Alien3Description", "Classified recordings reveal impossible craft—defying physics, watching, unafraid." },
           { "ExperimentBlueCapsule", "Experiment 3740 - Creatures from Proxima B, defying the boundaries of known life." },
           
-          
 
         };
 

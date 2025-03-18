@@ -14,6 +14,8 @@ TagManager:
   - Alien2Description
   - Alien3Description
   - ExperimentBlueCapsule
+  - Pickup
+  - PressE
   layers:
   - Default
   - TransparentFX
