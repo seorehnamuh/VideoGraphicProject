@@ -17,6 +17,13 @@ TagManager:
   - Pickup
   - Key
   - HistoryPanel1
+  - HistoryPanel2
+  - HistoryPanel3
+  - HistoryPanel4
+  - HistoryPanel5
+  - HistoryPanel6
+  - HistoryPanel7
+  - HistoryPanel8
   layers:
   - Default
   - TransparentFX

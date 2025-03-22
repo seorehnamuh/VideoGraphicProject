@@ -5,31 +5,33 @@ using System.Collections.Generic;
 
 public class HistoryPanel : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI guiText; // Riferimento al testo
-    [SerializeField] private AudioSource audioSource; // Riferimento all'AudioSource
+    [SerializeField] private TextMeshProUGUI guiText; 
+    [SerializeField] private AudioSource audioSource; 
 
-    private Dictionary<string, string> objectsWithMessages; // Dizionario per messaggi personalizzati
+    private Dictionary<string, string> objectsWithMessages; 
 
     void Start()
     {
-        guiText.enabled = false; // Inizialmente nascondiamo il testo
+        guiText.enabled = false; 
        objectsWithMessages = new Dictionary<string, string>
         {
      
-    { "HistoryPanel1", "Humanity detects an alien ship near the Solar System for the first time. After months of attempting communication, the first encounter with an extraterrestrial species takes place, causing global shock and wonder." } // Aggiungi questa chiave
+    { "HistoryPanel1", "Year 2124. Humanity detects an alien ship near the Solar System for the first time. After months of attempting communication, the first encounter with an extraterrestrial species takes place, causing global shock and wonder." },
+    { "HistoryPanel2", "As space exploration progresses, humanity discovers that there is not just one alien race, but many, with different levels of development and cultures. Some are friendly, others suspicious or hostile." },
+    { "HistoryPanel3", "After years of mistrust, the first exchanges with the races more open to dialogue begin. Humanity obtains new technologies, while the aliens become interested in human biology, art and psychology." }
         };
     }
 
-    // Quando il player entra in collisione con il pannello
+   
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player")) // Controlla se l'oggetto è il Player
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // Mostra il messaggio
+          
             guiText.text = objectsWithMessages[gameObject.tag];
             guiText.enabled = true;
 
-            // Riproduce l'audio in loop
+            
             if (audioSource != null && !audioSource.isPlaying)
             {
                 audioSource.loop = true;
@@ -38,15 +40,15 @@ public class HistoryPanel : MonoBehaviour
         }
     }
 
-    // Quando il player esce dal pannello
+    
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player")) // Controlla se l'oggetto che esce è il Player
+        if (collision.gameObject.CompareTag("Player")) 
         {
-            // Nasconde il testo
+     
             guiText.enabled = false;
 
-            // Ferma l'audio
+            
             if (audioSource != null && audioSource.isPlaying)
             {
                 audioSource.Stop();
