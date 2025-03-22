@@ -16,6 +16,7 @@ TagManager:
   - ExperimentBlueCapsule
   - Pickup
   - Key
+  - HistoryPanel1
   layers:
   - Default
   - TransparentFX
