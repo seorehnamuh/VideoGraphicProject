@@ -18,7 +18,10 @@ public class HistoryPanel : MonoBehaviour
      
     { "HistoryPanel1", "Year 2124. Humanity detects an alien ship near the Solar System for the first time. After months of attempting communication, the first encounter with an extraterrestrial species takes place, causing global shock and wonder." },
     { "HistoryPanel2", "As space exploration progresses, humanity discovers that there is not just one alien race, but many, with different levels of development and cultures. Some are friendly, others suspicious or hostile." },
-    { "HistoryPanel3", "After years of mistrust, the first exchanges with the races more open to dialogue begin. Humanity obtains new technologies, while the aliens become interested in human biology, art and psychology." }
+    { "HistoryPanel3", "After years of mistrust, the first exchanges with the races more open to dialogue begin. Humanity obtains new technologies, while the aliens become interested in human biology, art and psychology." },
+    { "HistoryPanel4", "Not all species are happy with humanity’s expansion into space. Some alien groups are starting to actively oppose it, while on Earth, movements are emerging that oppose alien influences." },
+    { "HistoryPanel5", "Year 1133. A critical event – ​​the attack of the humans on the Zorathite stone – endangers the fragile coexistence, bringing humanity and some races to the brink of war." }
+
         };
     }
 
