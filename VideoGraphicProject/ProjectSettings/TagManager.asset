@@ -24,6 +24,7 @@ TagManager:
   - HistoryPanel6
   - HistoryPanel7
   - HistoryPanel8
+  - MusicTrigger
   layers:
   - Default
   - TransparentFX
