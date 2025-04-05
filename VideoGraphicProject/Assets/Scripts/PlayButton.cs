@@ -12,7 +12,7 @@ public class PlayButton : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        gameSceneName = "ExperienceScene";
+        gameSceneName = "VideoScene";
     }
 
 
