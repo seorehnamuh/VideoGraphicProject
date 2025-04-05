@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PickUpDrop : MonoBehaviour
 {
-    [SerializeField] float pickupRange = 3f; // Range within which the player can pick up objects
-    [SerializeField] Transform holdPosition; // Position where the object will be held (e.g., an empty GameObject as a child of the camera)
-    private GameObject heldObject; // Reference to the currently held object
-    private Rigidbody heldObjectRb; // Rigidbody of the held object
+    [SerializeField] float pickupRange = 3f; 
+    [SerializeField] Transform holdPosition; 
+    private GameObject heldObject; 
+    private Rigidbody heldObjectRb; 
 
     void Update()
     {

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class PlayButton : MonoBehaviour
 {
-    AudioSource audioSource; // AudioSource che riproduce il suono
-    // [SerializeField] AudioClip clickSound;
+    private AudioSource audioSource; 
+    
    private string gameSceneName; 
     void Start()
     {

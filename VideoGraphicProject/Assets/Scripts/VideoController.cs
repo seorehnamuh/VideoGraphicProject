@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class VideoController : MonoBehaviour
 {
-    public string nextSceneName = "ExperienceScene"; // Sostituisci con il nome della scena di gioco
+    private string nextSceneName; 
     private VideoPlayer videoPlayer;
 
     void Start()
     {
+        nextSceneName = "ExperienceScene";
         videoPlayer = GetComponent<VideoPlayer>();
-        videoPlayer.loopPointReached += OnVideoEnd; // Quando il video finisce, cambia scena
+        videoPlayer.loopPointReached += OnVideoEnd; 
     }
 
     void OnVideoEnd(VideoPlayer vp)

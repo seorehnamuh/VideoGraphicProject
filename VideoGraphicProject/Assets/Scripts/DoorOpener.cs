@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorOpener : MonoBehaviour
 {
-    // Start is called before the first frame update
+  
     [SerializeField] GameObject DoorCanvas;
     [SerializeField] GameObject DoorToOpen;
 
@@ -27,7 +27,7 @@ public class DoorOpener : MonoBehaviour
         IsPlayerCloseToTheButton = false;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
     }
