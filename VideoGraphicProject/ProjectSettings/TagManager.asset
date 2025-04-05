@@ -25,6 +25,7 @@ TagManager:
   - HistoryPanel7
   - HistoryPanel8
   - MusicTrigger
+  - Pannello
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Pannello
   - 
   - 
   - 
