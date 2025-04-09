@@ -1,3 +1,6 @@
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +8,14 @@ using UnityEngine;
 public class PickUpDrop : MonoBehaviour
 {
     [SerializeField] float pickupRange = 3f; 
+    [SerializeField] float pickupRadius = 0.5f; // NEW: Defines how wide the detection area is
     [SerializeField] Transform holdPosition; 
     private GameObject heldObject; 
     private Rigidbody heldObjectRb; 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             if (heldObject == null)
             {
@@ -33,7 +37,8 @@ public class PickUpDrop : MonoBehaviour
     void TryPickup()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, pickupRange))
+        // NEW: Use SphereCast for a wider detection range
+        if (Physics.SphereCast(transform.position, pickupRadius, transform.forward, out hit, pickupRange))
         {
             if (hit.collider.CompareTag("Pickup"))
             {
