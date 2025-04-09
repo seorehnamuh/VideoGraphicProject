@@ -22,7 +22,7 @@ public class PressurePlate : MonoBehaviour
 
         if (door != null)
         {
-            doorTargetY = door.transform.position.y + 3f; // Apre la porta verso l'alto di 3 unità
+            doorTargetY = door.transform.position.y + 3.5f; // Apre la porta verso l'alto di 3 unità
         }
     }
 
