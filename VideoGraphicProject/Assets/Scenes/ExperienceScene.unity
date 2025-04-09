@@ -7352,7 +7352,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -272.8005, w: 0}
+  m_margin: {x: -161.50427, y: 0, z: -395.24173, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -44208,7 +44208,7 @@ MonoBehaviour:
   pickupRange: 5
   pickupRadius: 0.5
   holdPosition: {fileID: 1570659051}
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 234812610}
 --- !u!1 &1407821701
 GameObject:
   m_ObjectHideFlags: 0
