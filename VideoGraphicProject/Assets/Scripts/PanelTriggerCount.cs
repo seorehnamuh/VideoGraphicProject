@@ -41,14 +41,14 @@ public class PanelCollisionCount : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Player"))  
         {
-            Debug.Log("Giocatore ha colpito il pannello!");
+            // Debug.Log("Giocatore ha colpito il pannello!");
 
      
             if (gameObject.layer == LayerMask.NameToLayer("Pannello"))
             {
                 Debug.Log("Il pannello è nel layer giusto!");
                 instructionManager.PanelChecked();  
-                Debug.Log("Conteggio pannelli: " + instructionManager.GetCurrentPanelsChecked());  
+                // Debug.Log("Conteggio pannelli: " + instructionManager.GetCurrentPanelsChecked());  
             }
             else
             {
