@@ -8,7 +8,7 @@ public class InstructionManager : MonoBehaviour
     [SerializeField] TMP_Text npcDialogText; 
     private int panelsChecked;  
     private int totalPanels;  
-    private float instructionDisplayTime = 7f;  
+    private float instructionDisplayTime = 1.5f;  
 
     void Start()
     {
