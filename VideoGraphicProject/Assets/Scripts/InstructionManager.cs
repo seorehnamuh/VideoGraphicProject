@@ -34,7 +34,7 @@ public class InstructionManager : MonoBehaviour
 
         instructionText.text = $"Pannelli controllati: {panelsChecked}/{totalPanels}";
 
-        if (panelsChecked == totalPanels)
+        if (panelsChecked >= totalPanels)
         {
             Debug.Log("Tutti i pannelli sono stati controllati!");  
             ShowNPCDialog();  

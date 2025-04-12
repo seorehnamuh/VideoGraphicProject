@@ -4,21 +4,22 @@
 
 // public class PanelCollisionCount : MonoBehaviour
 // {
-//     public InstructionManager instructionManager;  // Riferimento allo script InstructionManager
+//     public InstructionManager instructionManager;  
 
+  
 //     private void OnCollisionEnter(Collision collision)
 //     {
-//         // Verifica se il giocatore entra in collisione con il pannello
-//         if (collision.gameObject.CompareTag("Player"))  // Verifica il tag del player
+        
+//         if (collision.gameObject.CompareTag("Player"))  
 //         {
 //             Debug.Log("Giocatore ha colpito il pannello!");
 
-//             // Verifica se il pannello è nel layer giusto
+     
 //             if (gameObject.layer == LayerMask.NameToLayer("Pannello"))
 //             {
 //                 Debug.Log("Il pannello è nel layer giusto!");
-//                 instructionManager.PanelChecked();  // Chiama la funzione per incrementare il conteggio dei pannelli controllati
-//                 Debug.Log("Conteggio pannelli: " + InstructionManager.panelsChecked);  // Mostra il conteggio aggiornato dei pannelli
+//                 instructionManager.PanelChecked();  
+//                 Debug.Log("Conteggio pannelli: " + instructionManager.GetCurrentPanelsChecked());  
 //             }
 //             else
 //             {
@@ -33,22 +34,23 @@ using UnityEngine;
 
 public class PanelCollisionCount : MonoBehaviour
 {
-    public InstructionManager instructionManager;  
+    public InstructionManager instructionManager;
 
-  
+    private bool isChecked = false; // 👈 Per evitare conteggi doppi
+
     private void OnCollisionEnter(Collision collision)
     {
-        
-        if (collision.gameObject.CompareTag("Player"))  
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // Debug.Log("Giocatore ha colpito il pannello!");
-
-     
-            if (gameObject.layer == LayerMask.NameToLayer("Pannello"))
+            if (!isChecked && gameObject.layer == LayerMask.NameToLayer("Pannello"))
             {
-                Debug.Log("Il pannello è nel layer giusto!");
-                instructionManager.PanelChecked();  
-                // Debug.Log("Conteggio pannelli: " + instructionManager.GetCurrentPanelsChecked());  
+                Debug.Log("Il pannello è nel layer giusto e non è stato ancora controllato!");
+                instructionManager.PanelChecked();
+                isChecked = true; // 👈 Impedisce di contare di nuovo questo pannello
+            }
+            else if (isChecked)
+            {
+                Debug.Log("Questo pannello è già stato controllato.");
             }
             else
             {
