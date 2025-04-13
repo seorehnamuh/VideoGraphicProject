@@ -1,55 +1,3 @@
-// using UnityEngine;
-
-// public class TriggerAlarm : MonoBehaviour
-// {
-//     public AudioSource alarmSound;
-//     public Light[] redLights;
-//     public float blinkSpeed = 1f;
-
-//     private bool alarmTriggered = false;
-//     private float blinkTimer = 0f;
-
-//     private void Start()
-//     {
-//         // Luci spente all'inizio
-//         foreach (Light light in redLights)
-//         {
-//             light.enabled = false;
-//         }
-//     }
-
-//     private void Update()
-//     {
-//         if (alarmTriggered)
-//         {
-//             BlinkLights();
-//         }
-//     }
-
-//     private void OnTriggerEnter(Collider other)
-//     {
-//         if (!alarmTriggered && other.CompareTag("Player"))
-//         {
-//             alarmTriggered = true;
-
-//             if (alarmSound != null && !alarmSound.isPlaying)
-//             {
-//                 alarmSound.Play();
-//             }
-//         }
-//     }
-
-//     private void BlinkLights()
-//     {
-//         blinkTimer += Time.deltaTime * blinkSpeed;
-//         bool isOn = Mathf.FloorToInt(blinkTimer) % 2 == 0;
-
-//         foreach (Light light in redLights)
-//         {
-//             light.enabled = isOn;
-//         }
-//     }
-// }
 
 
 using UnityEngine;
@@ -58,11 +6,11 @@ using UnityEngine.UI;
 
 public class TriggerAlarm : MonoBehaviour
 {
-    public AudioSource alarmSound;
-    public Light[] redLights;
-    public float blinkSpeed = 1f;
+    [SerializeField] AudioSource alarmSound;
+    [SerializeField] Light[] redLights;
+    [SerializeField] float blinkSpeed = 1f;
 
-    public GameObject alarmTextUI;
+    [SerializeField] GameObject alarmTextUI;
 
     private bool alarmTriggered = false;
     private float blinkTimer = 0f;

@@ -39,7 +39,7 @@ public class AdaNpc : MonoBehaviour
     {
         Debug.Log("Showing notification: 'Press E to talk to Ada'.");
         notificationText.gameObject.SetActive(true);  
-        notificationText.text = "Press 'E' to talk to Ada.";  
+        notificationText.text = "Press [E] to talk to Ada.";  
     }
 
     private void HideNotification()
