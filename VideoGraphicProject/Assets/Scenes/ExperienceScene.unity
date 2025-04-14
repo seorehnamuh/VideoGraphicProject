@@ -7082,7 +7082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &205414300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10300,6 +10300,8 @@ GameObject:
   m_Component:
   - component: {fileID: 292970189}
   - component: {fileID: 292970188}
+  - component: {fileID: 292970190}
+  - component: {fileID: 292970191}
   m_Layer: 0
   m_Name: TriggerDialogRobot
   m_TagString: Untagged
@@ -10326,8 +10328,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7378616, y: 1.6338137, z: 1.1050946}
+  m_Center: {x: 0.41615677, y: 0.31690687, z: -0.052547194}
 --- !u!4 &292970189
 Transform:
   m_ObjectHideFlags: 0
@@ -10337,12 +10339,130 @@ Transform:
   m_GameObject: {fileID: 292970187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.76, y: -1.1910925, z: -15.25}
+  m_LocalPosition: {x: -77.656, y: -1.484, z: -15.25}
   m_LocalScale: {x: 1, y: 1, z: 1.805}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &292970190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292970187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d49249f47a0beb4196c8342ce4509f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porta: {fileID: 5087163063658854593}
+  dialogoText: {fileID: 205414301}
+  notificationText: {fileID: 1580083221}
+  dialogoNPC:
+  - 'R2D2: Hi, Seargeant Alfa.'
+  - 'Alfa: We''re under attack. Open Assault Bridge.'
+  - 'R2D2: Code please.'
+  - 'Alfa: 7453SGV-023.'
+  - 'R2D2: Door open.'
+  suonoAperturaPorta: {fileID: 8300000, guid: 2867d67348f1fb843b5aa6e1676ad13b, type: 3}
+--- !u!82 &292970191
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292970187}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2867d67348f1fb843b5aa6e1676ad13b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!65 &293796952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17457,15 +17577,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.28
+      value: -66.84
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.652
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.09
+      value: -14.91
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34889,10 +35009,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1019100830}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7857803c4417eec42884f33583f7a765,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1019100833}
   m_SourcePrefab: {fileID: 100100000, guid: 7857803c4417eec42884f33583f7a765, type: 3}
 --- !u!1 &1019100829 stripped
 GameObject:
@@ -35038,22 +35154,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1019100833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019100829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d49249f47a0beb4196c8342ce4509f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  porta: {fileID: 0}
-  animPorta: {fileID: 0}
-  dialogoText: {fileID: 0}
-  dialogoNPC: []
 --- !u!1001 &1020513658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63307,7 +63407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Need Lab Energy Bar to Open
+  m_text: Seems that an Energy Lab-17 Bar Lab  is needed to Open the door..
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a5f71e366399404586a87e205b7f95d, type: 2}
   m_sharedMaterial: {fileID: -103515543440445067, guid: 3a5f71e366399404586a87e205b7f95d,
@@ -69672,7 +69772,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1001 &2082485472
 PrefabInstance:
@@ -109006,7 +109106,6 @@ GameObject:
   - component: {fileID: 8717774976023844688}
   - component: {fileID: 5028898324649652260}
   - component: {fileID: 1835014046}
-  - component: {fileID: 8717774976023844689}
   m_Layer: 0
   m_Name: LastDoor
   m_TagString: Untagged
@@ -135952,27 +136051,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5087163063658854593}
   m_Mesh: {fileID: -18971045557703102, guid: d19d9ca5793533749b8a3fc6389af07e, type: 3}
---- !u!95 &8717774976023844689
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5087163063658854593}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c74f679e4d387e042a1897c8a11a8c02, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!23 &8722753356632926822
 MeshRenderer:
   m_ObjectHideFlags: 0

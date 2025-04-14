@@ -1,25 +1,151 @@
-using System.Collections;
+// using UnityEngine;
+// using TMPro;
+// using System.Collections;
+
+// public class DialogoNPC : MonoBehaviour
+// {
+//     public GameObject porta;
+//     public TMP_Text dialogoText;
+//     public TMP_Text notificationText;
+//     public string[] dialogoNPC;
+
+//     private bool nelRaggio = false;
+//     private bool dialogoAttivo = false;
+//     private int indiceDialogo = 0;
+
+//     private void Start()
+//     {
+//         dialogoText.gameObject.SetActive(false);
+//         notificationText.gameObject.SetActive(false);
+//     }
+
+//     private void OnTriggerEnter(Collider other)
+//     {
+//         if (other.CompareTag("Player"))
+//         {
+//             Debug.Log("✅ Player è entrato nel trigger");
+//             nelRaggio = true;
+
+//             if (!dialogoAttivo)
+//             {
+//                 StartCoroutine(MostraMessaggioTemporaneo("Press [E] to interact", 2f));
+//             }
+//         }
+//     }
+
+//     private void OnTriggerExit(Collider other)
+//     {
+//         if (other.CompareTag("Player"))
+//         {
+//             Debug.Log("❌ Player è uscito dal trigger");
+//             nelRaggio = false;
+//             FineDialogo();
+//             notificationText.gameObject.SetActive(false);
+//         }
+//     }
+
+//     private void Update()
+//     {
+//         if (nelRaggio && Input.GetKeyDown(KeyCode.E))
+//         {
+//             Debug.Log("⌨️ Tasto E premuto");
+
+//             if (!dialogoAttivo)
+//             {
+//                 Debug.Log("🟡 Inizio dialogo");
+//                 notificationText.gameObject.SetActive(false);
+//                 IniziaDialogo();
+//             }
+//             else
+//             {
+//                 Debug.Log("➡️ Avanza dialogo");
+//                 AvanzaDialogo();
+//             }
+//         }
+//     }
+
+//     void IniziaDialogo()
+//     {
+//         dialogoAttivo = true;
+//         indiceDialogo = 0;
+//         dialogoText.gameObject.SetActive(true);
+//         dialogoText.text = dialogoNPC[indiceDialogo];
+//         Debug.Log("🗨️ Mostra frase: " + dialogoNPC[indiceDialogo]);
+//     }
+
+//     void AvanzaDialogo()
+//     {
+//         indiceDialogo++;
+
+//         if (indiceDialogo < dialogoNPC.Length)
+//         {
+//             dialogoText.text = dialogoNPC[indiceDialogo];
+//             Debug.Log("🗨️ Mostra frase: " + dialogoNPC[indiceDialogo]);
+//         }
+//         else
+//         {
+//             Debug.Log("🚪 Fine dialogo, disattivo porta");
+//             FineDialogo();
+//             porta.SetActive(false);
+//         }
+//     }
+
+//     void FineDialogo()
+//     {
+//         dialogoText.gameObject.SetActive(false);
+//         dialogoAttivo = false;
+//         Debug.Log("🔕 Dialogo chiuso");
+//     }
+
+//     IEnumerator MostraMessaggioTemporaneo(string messaggio, float durata)
+//     {
+//         notificationText.text = messaggio;
+//         notificationText.gameObject.SetActive(true);
+//         yield return new WaitForSeconds(durata);
+//         notificationText.gameObject.SetActive(false);
+//     }
+// }
+
+
 using UnityEngine;
-using TMPro; // Importa il namespace di TextMesh Pro
+using TMPro;
+using System.Collections;
 
 public class DialogoNPC : MonoBehaviour
 {
-    public GameObject porta; // Riferimento alla porta
-    public Animator animPorta; // Animator della porta per gestire l'animazione
-    public TMP_Text dialogoText; // Riferimento al testo del dialogo (TextMesh Pro)
-    public string[] dialogoNPC; // Array di frasi che l'NPC dice
-    private bool nelRaggio = false; // Se il player è nel raggio di trigger
+    public GameObject porta;
+    public TMP_Text dialogoText;
+    public TMP_Text notificationText;
+    public string[] dialogoNPC;
 
+    // Nuove variabili per il suono
+    public AudioClip suonoAperturaPorta;  // Il suono da riprodurre
+    private AudioSource audioSource;  // Il componente AudioSource
+
+    private bool nelRaggio = false;
+    private bool dialogoAttivo = false;
     private int indiceDialogo = 0;
 
+    private void Start()
+    {
+        dialogoText.gameObject.SetActive(false);
+        notificationText.gameObject.SetActive(false);
 
-    // Trigger del dialogo quando il player entra nell'area
+        // Ottieni il componente AudioSource attaccato allo stesso GameObject
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("✅ Player è entrato nel trigger");
             nelRaggio = true;
-            MostraDialogo();
+
+            if (!dialogoAttivo)
+            {
+                StartCoroutine(MostraMessaggioTemporaneo("Press [E] to interact", 2f));
+            }
         }
     }
 
@@ -27,61 +153,77 @@ public class DialogoNPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("❌ Player è uscito dal trigger");
             nelRaggio = false;
-            NascondiDialogo();
+            FineDialogo();
+            notificationText.gameObject.SetActive(false);
         }
     }
 
     private void Update()
     {
-        // Se il player è nel raggio, premere il tasto E per interagire
         if (nelRaggio && Input.GetKeyDown(KeyCode.E))
         {
-            if (indiceDialogo < dialogoNPC.Length)
+            Debug.Log("⌨️ Tasto E premuto");
+
+            if (!dialogoAttivo)
             {
-                // Iniziamo l'effetto di scrittura lettera per lettera
-                StartCoroutine(ScritturaEffetto(dialogoNPC[indiceDialogo]));
-                indiceDialogo++;
+                Debug.Log("🟡 Inizio dialogo");
+                notificationText.gameObject.SetActive(false);
+                IniziaDialogo();
             }
             else
             {
-                // Una volta finito il dialogo, l'NPC aprirà la porta
-                ApriPorta();
-                NascondiDialogo();
+                Debug.Log("➡️ Avanza dialogo");
+                AvanzaDialogo();
             }
         }
     }
 
-    // Mostra il testo del dialogo
-    void MostraDialogo()
+    void IniziaDialogo()
     {
+        dialogoAttivo = true;
+        indiceDialogo = 0;
         dialogoText.gameObject.SetActive(true);
-        StartCoroutine(ScritturaEffetto(dialogoNPC[indiceDialogo])); // Avvia l'effetto di scrittura lettera per lettera
+        dialogoText.text = dialogoNPC[indiceDialogo];
+        Debug.Log("🗨️ Mostra frase: " + dialogoNPC[indiceDialogo]);
     }
 
-    // Nascondi il testo del dialogo
-    void NascondiDialogo()
+    void AvanzaDialogo()
+    {
+        indiceDialogo++;
+
+        if (indiceDialogo < dialogoNPC.Length)
+        {
+            dialogoText.text = dialogoNPC[indiceDialogo];
+            Debug.Log("🗨️ Mostra frase: " + dialogoNPC[indiceDialogo]);
+        }
+        else
+        {
+            Debug.Log("🚪 Fine dialogo, disattivo porta");
+            FineDialogo();
+            porta.SetActive(false);
+
+            // Riproduce il suono quando la porta viene disattivata
+            if (suonoAperturaPorta != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(suonoAperturaPorta);
+            }
+        }
+    }
+
+    void FineDialogo()
     {
         dialogoText.gameObject.SetActive(false);
+        dialogoAttivo = false;
+        Debug.Log("🔕 Dialogo chiuso");
     }
 
-    // Funzione per far aprire la porta tramite l'animazione
-    void ApriPorta()
+    IEnumerator MostraMessaggioTemporaneo(string messaggio, float durata)
     {
-        if (animPorta != null)
-        {
-            animPorta.SetBool("openDoor", true);
-        }
-    }
-
-    // Coroutine per l'effetto di scrittura lettera per lettera
-    IEnumerator ScritturaEffetto(string testo)
-    {
-        dialogoText.text = ""; // Pulisce il testo precedente
-        foreach (char lettera in testo.ToCharArray())
-        {
-            dialogoText.text += lettera; // Aggiungi una lettera alla volta
-            yield return new WaitForSeconds(0.05f); // Imposta il tempo di attesa tra ogni lettera
-        }
+        notificationText.text = messaggio;
+        notificationText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(durata);
+        notificationText.gameObject.SetActive(false);
     }
 }
