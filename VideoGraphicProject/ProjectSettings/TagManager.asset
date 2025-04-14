@@ -26,6 +26,7 @@ TagManager:
   - HistoryPanel8
   - MusicTrigger
   - Pannello
+  - OpenDoorRequest
   layers:
   - Default
   - TransparentFX

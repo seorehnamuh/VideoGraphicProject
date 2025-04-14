@@ -56850,8 +56850,8 @@ GameObject:
   - component: {fileID: 1719067052}
   - component: {fileID: 1719067053}
   m_Layer: 0
-  m_Name: AccessDeniedTrigger1
-  m_TagString: AccessDeniedTrigger
+  m_Name: OpenDoorRobotRequest
+  m_TagString: OpenDoorRequest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
