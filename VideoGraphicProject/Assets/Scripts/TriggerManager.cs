@@ -29,7 +29,7 @@ public class TriggerManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

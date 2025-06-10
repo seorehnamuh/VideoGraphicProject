@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // Importa TextMeshPro per gestire il testo UI
+using TMPro; 
 
 public class PickUpDrop : MonoBehaviour
 {
     [SerializeField] float pickupRange = 3f;
     [SerializeField] float pickupRadius = 0.5f;
     [SerializeField] Transform holdPosition;
-    [SerializeField] TextMeshProUGUI pickupText; // NEW: Riferimento all'UI
+    [SerializeField] TextMeshProUGUI pickupText; 
 
     private GameObject heldObject;
     private Rigidbody heldObjectRb;
@@ -17,7 +17,7 @@ public class PickUpDrop : MonoBehaviour
     void Start()
     {
         if (pickupText != null)
-            pickupText.gameObject.SetActive(false); // Assicura che il testo sia nascosto all'inizio
+            pickupText.gameObject.SetActive(false); 
     }
 
     void Update()
@@ -57,7 +57,7 @@ public class PickUpDrop : MonoBehaviour
                 isNearObject = false;
 
                 if (pickupText != null)
-                    pickupText.gameObject.SetActive(false); // Nasconde il testo quando si raccoglie l'oggetto
+                    pickupText.gameObject.SetActive(false); 
             }
         }
     }
@@ -76,6 +76,6 @@ public class PickUpDrop : MonoBehaviour
         isNearObject = Physics.SphereCast(transform.position, pickupRadius, transform.forward, out hit, pickupRange) && hit.collider.CompareTag("Pickup");
 
         if (pickupText != null)
-            pickupText.gameObject.SetActive(isNearObject && heldObject == null); // Mostra/Nasconde il testo
+            pickupText.gameObject.SetActive(isNearObject && heldObject == null); 
     }
 }

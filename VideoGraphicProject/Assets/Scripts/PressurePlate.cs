@@ -5,15 +5,15 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     [Header("Settings")]
-    public GameObject door; // La porta da aprire/chiudere
-    public string requiredTag = "KeyObject"; // Tag dell'oggetto che attiva la piastra
-    public float moveDistance = 0.1f; // Quanto si abbassa la piastra quando attivata
-    public float doorOpenSpeed = 2f; // Velocità di apertura della porta
+    public GameObject door; 
+    public string requiredTag = "KeyObject"; 
+    public float moveDistance = 0.1f; 
+    public float doorOpenSpeed = 2f; 
 
     private Vector3 initialPosition;
     private Vector3 pressedPosition;
     private bool isPressed = false;
-    private float doorTargetY; // Altezza finale della porta (per apertura verticale)
+    private float doorTargetY; 
 
     void Start()
     {
@@ -22,13 +22,13 @@ public class PressurePlate : MonoBehaviour
 
         if (door != null)
         {
-            doorTargetY = door.transform.position.y + 3.5f; // Apre la porta verso l'alto di 3 unità
+            doorTargetY = door.transform.position.y + 3.5f;
         }
     }
 
     void Update()
     {
-        // Muove la porta se è stata assegnata
+       
         if (door != null && isPressed)
         {
             float step = doorOpenSpeed * Time.deltaTime;
@@ -42,7 +42,7 @@ public class PressurePlate : MonoBehaviour
         if (other.CompareTag(requiredTag))
         {
             isPressed = true;
-            transform.position = pressedPosition; // La piastra si abbassa
+            transform.position = pressedPosition;
             Debug.Log("True");
         }
     }
@@ -52,7 +52,7 @@ public class PressurePlate : MonoBehaviour
         if (other.CompareTag(requiredTag))
         {
             isPressed = false;
-            transform.position = initialPosition; // La piastra torna su
+            transform.position = initialPosition; 
         }
     }
 }

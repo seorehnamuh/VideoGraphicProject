@@ -10,9 +10,8 @@ public class DialogoNPC : MonoBehaviour
     [SerializeField] TMP_Text notificationText;
     [SerializeField] string[] dialogoNPC;
 
-    // Nuove variabili per il suono
-    [SerializeField] AudioClip suonoAperturaPorta;  // Il suono da riprodurre
-    private AudioSource audioSource;  // Il componente AudioSource
+    [SerializeField] AudioClip suonoAperturaPorta; 
+    private AudioSource audioSource;  
 
     private bool nelRaggio = false;
     private bool dialogoAttivo = false;
@@ -23,7 +22,7 @@ public class DialogoNPC : MonoBehaviour
         dialogoText.gameObject.SetActive(false);
         notificationText.gameObject.SetActive(false);
 
-        // Ottieni il componente AudioSource attaccato allo stesso GameObject
+      
         audioSource = GetComponent<AudioSource>();
     }
 
